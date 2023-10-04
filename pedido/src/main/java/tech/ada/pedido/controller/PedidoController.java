@@ -18,6 +18,7 @@ public class PedidoController {
     private final ValidarProduto validarProduto;
 
     public PedidoController(ValidarProduto validarProduto) {
+
         this.validarProduto = validarProduto;
     }
 
@@ -29,8 +30,9 @@ public class PedidoController {
         return pedido;
     }
 
-    @GetMapping
+    @GetMapping("{id}")
     public Pedido get(@PathVariable int id) {
+
         return pedidos.get(id);
     }
 }
